@@ -1,0 +1,24 @@
+= RequestMobile
+
+Detecting mobile devices based on HTTP_USER_AGENT header
+
+
+== Install
+
+    ruby script/plugin install git@github.com:sumskyi/request_mobile.git
+
+== Usage
+
+In you controller:
+
+    before_filter do |controller|
+      tynimce_init unless controller.request.mobile?
+    end
+
+
+    def new
+      some_stuff if request.mobile?
+    end
+
+
+Copyright (c) 2010 Vladyslav Sumskyi, released under the MIT license
